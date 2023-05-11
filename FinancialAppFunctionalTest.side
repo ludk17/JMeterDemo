@@ -1,0 +1,171 @@
+{
+  "id": "d0d7d0a6-654f-4c40-9367-dd1433d4ba1c",
+  "version": "2.0",
+  "name": "FinancialAppFunctionalTest",
+  "url": "https://localhost:7119",
+  "tests": [{
+    "id": "184ec829-5e25-4d69-8036-31aea144cf38",
+    "name": "Login Incorrecto",
+    "commands": [{
+      "id": "7b175586-cf3f-416b-ade9-18d63f810dde",
+      "comment": "",
+      "command": "open",
+      "target": "/auth/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d63f0531-3a84-4355-8112-583f12e5a71a",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74e3d353-a1a5-44c3-98d4-b53574a81bbc",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "396591bb-8ac1-4dfb-ba5a-e6f8a472dfac",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2f7b40e9-7124-433b-9d04-59e9d1fb7f4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9456cbe9-5487-413e-9f56-d003424f1a38",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.field-validation-error",
+      "targets": [
+        ["css=.field-validation-error", "css:finder"],
+        ["xpath=//form/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Usuario y/o contraseña erronea')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ba12f8c-a1ba-4028-b233-a50bba6d510d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0372453f-54a2-4052-a1dd-49d988348794",
+    "name": "Login Correcto",
+    "commands": [{
+      "id": "b9dc005c-fcd6-4b3c-aaeb-474142fa7493",
+      "comment": "",
+      "command": "open",
+      "target": "/auth/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d70e7aa-0331-4b0c-9e88-2acb32336593",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d430e15-3e70-4914-a36f-1afd079f608c",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "2cf514c6-d61b-4d16-ae1f-d39140e87642",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "3c2974e0-9b7b-4c97-93b8-e81018d9e8f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73b553bb-a3ed-4aa9-bd0d-e8670b68da2e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=CuentasIndex",
+      "targets": [
+        ["id=MainTitle", "id"],
+        ["css=#MainTitle", "css:finder"],
+        ["xpath=//h1[@id='MainTitle']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Cuentas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26b79a17-7834-4c3c-aa59-0b07ebe58817",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c8edbaf9-ee56-4f40-8a98-4a2a6f572f06",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["184ec829-5e25-4d69-8036-31aea144cf38"]
+  }],
+  "urls": ["https://localhost:7119/"],
+  "plugins": []
+}

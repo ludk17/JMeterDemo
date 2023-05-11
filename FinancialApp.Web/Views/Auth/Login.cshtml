@@ -1,0 +1,22 @@
+
+
+<div class="row ">
+    <div class="col-md-4 offset-4">
+        <form method="post" class="mt-5" action="/auth/login">
+
+            @Html.ValidationMessage("AuthError")
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label fclass="form-label">Password</label>
+                <input type="password" name="password"  class="form-control">
+            </div>
+            
+            <br>
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>
+
